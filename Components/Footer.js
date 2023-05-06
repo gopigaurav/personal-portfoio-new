@@ -10,22 +10,8 @@ const Footer = () => {
   return (
     <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg dark:text-light dark:border-light sm:text-base">
       <Layout className="py-2 flex items-center justify-between lg:flex-col lg:py-6">
-        <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
-        <div className="flex items-center lg:py-2">
-          Made with&nbsp;{" "}
-          <span className="mt-1">{<AiFillHeart color="red" />}</span>&nbsp;by
-          &nbsp;
-          <Link
-            href={"https://github.com/soumyasootar"}
-            className={"underline"}
-            target="_blank"
-          >
-            {" "}
-            soumyasootar
-          </Link>
-        </div>
         <Link
-          href={"https://www.linkedin.com/in/soumya-swaroop-sootar-a4b708118/"}
+          href={"https://www.linkedin.com/in/-a4b708118/"}
           target="_blank"
           className={"underline"}
         >

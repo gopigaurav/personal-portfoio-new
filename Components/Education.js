@@ -48,24 +48,18 @@ const Education = () => {
         />
 
         <ul className="w-full flex flex-col items-start justify-between xs:ml-2">
-          <Details
-            type="Full Stack Web Development"
-            time="Aug 2022 - Apr 2023 "
+          {/* <Details
+            type="Software Developer"
+            time="present"
             place=" Masai School , Bangalore "
             info="Completed 1200+ Hours of coursework in topics such as JAVA,DATA STRUCTURE AND ALGORITHMS, REACT ,REDUX ,NODE.JS ,EXPRESS.JS ,MONGODB ,MONGOOSE ,NEXT.JS."
           />
           <Details
-            type="Bachelor Of Technology In Agricultural Engineering"
+            type="Bachelor Of Technology In Electronics & Communication"
             time="2018-2022 "
-            place=" College Of Agricultural Engineering and Technology (C.A.E.T.) , OUAT"
+            place=""
             info="Bhubaneswar,Odisha,India"
-          />
-          <Details
-            type="12th board (CBSE)"
-            time="2018 "
-            place=" SAI INTERNATIONAL SCHOOL"
-            info="Bhubaneswar,Odisha,India"
-          />
+          /> */}
         </ul>
       </div>
     </div>
