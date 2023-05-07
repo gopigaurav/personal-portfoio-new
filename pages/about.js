@@ -55,6 +55,11 @@ const About = () => {
                 BIOGRAPHY
               </h2>
               <p className="font-medium">
+                Hello, My Name is T C Gopal, and I am a Software Developer
+                I have work experience in MERN, MEAN,  python, etc. My strong
+                collaboration and problem-solving skills were developed through
+                team projects, and I am highly motivated to apply my technical
+                skills to new and exciting projects.
               </p>
 
               <p className="font-medium my-4">
