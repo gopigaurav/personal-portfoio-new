@@ -9,7 +9,8 @@ import zostelimg from "../public/images/projects/ZOSTEL.png";
 import fabimg from "../public/images/projects/Faballey.png";
 import shopimg from "../public/images/projects/Shop.png";
 import Transitions from "@/Components/Transitions";
-import Portfolioimg from "../public/images/projects/Portfolio.png"
+import Portfolioimg from "../public/images/projects/Portfolio.png";
+import project_details from "../features/project.json";
 
 const FeatureProject = ({ type, title, summary, img, github, link }) => {
   return (
@@ -116,6 +117,7 @@ const Project = ({ type, title, summary, img, github, link }) => {
 };
 
 const projects = () => {
+  const data = project_details;
   return (
     <>
       <Head>
@@ -129,50 +131,20 @@ const projects = () => {
             text="Imagination Trumps Knowledge!"
             className="mb-16 lg:!text-7xl sm:!mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <div className="grid grid-cols-12 gap-24 xl:gap-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-5 ">
-            <div className="col-span-12">
-              <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"ZOSTEL"}
-                link="https://zostel-ten.vercel.app/"
-                github={"https://github.com/soumyasootar/zostel"}
-                img={zostelimg}
-                summary="Zostel is a hostel booking website with over 60+ destinations across India and Nepal. The website features authenticated login with email verification, the ability to book multiple rooms, voice search, and dark mode. The tech stack used includes React, React-Redux, JS, Chakra UI, Framer Motion, and Email JS. The project responsibilities included implementing Email JS on the login page, coding the destination page, debugging the payment page, ensuring responsiveness, debugging the room booking page, and maintaining the GitHub codebase."
-              />
+          {project_details.map((key) => (
+            <div className="grid grid-cols-12 gap-24 xl:gap-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-5 ">
+              <div className="col-span-12">
+                <FeatureProject
+                  type={"FEATURE PROJECT"}
+                  title={key.project_name}
+                  link={key.link}
+                  github={key.github_link}
+                  img={key.img_link}
+                  summary={key.description}
+                />
+              </div>
             </div>
-            <div className="col-span-12">
-              <FeatureProject
-                type={"FEATURE PROJECT"}
-                title={"PORTFOLIO"}
-                link="https://soumyaswaroopsootar.vercel.app/"
-                github={"https://github.com/soumyasootar/Portfolio"}
-                img={Portfolioimg}
-                summary="A portfolio website using Nextjs and TailwindCSS is a great way to showcase skills. It has a clean design and easy navigation with separate pages for projects, skills, and about me. Projects have details on tools used, skills list expertise, and About Me page has bio, resume, and contact information. It offers a professional online presence for potential clients/employers to learn about skills and accomplishments."
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type={"PROJECT"}
-                title={"FABALLEY"}
-                link="https://fab-alley-clone-10.vercel.app/"
-                github={"https://github.com/soumyasootar/FabAlley"}
-                img={fabimg}
-                // summary="FABALLEY - Fashion at your fingertips! Discover thousands of trendy and affordable styles on this Indian e-commerce website. Enjoy a seamless shopping experience with authenticated login/signup, voice search, sort and filter options. With a talented team, we've coded the landing page, login/signup with Email JS, cart, address, payment, and profile pages, ensuring responsiveness across all devices. Join the fashion revolution with FABALLEY!"
-                summary="Authenticated login/signup, sort/filter, and voice search, built with HTML, JS, CSS, Email JS and Bootstrap."
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type={"PROJECT"}
-                title={"Shop.com"}
-                link="https://shopclone10.netlify.app/project.html"
-                github={"https://github.com/soumyasootar/www.shop.com"}
-                img={shopimg}
-                summary="HTML, JS, and CSS used to create an e-commerce website with authentication, sorting, filtering, and voice search functionality."
-                // summary="Shop smarter and save big with SHOP.COM! Our e-commerce website offers thousands of products from different retailers, featuring authenticated login, sort and filter options, and even voice search.Tech Stacks used in this project are pure HTML, CSS and JS. Our team of five developers coded essential pages like cart, address, payment, and profile to ensure a seamless shopping experience. Enjoy a user-friendly and responsive platform that helps you find the best deals!"
-              />
-            </div>
-          </div>
+          ))}
         </Layout>
       </main>
     </>
