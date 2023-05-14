@@ -9,9 +9,11 @@ const HireMe = () => {
         <CircularTextFullStack className="fill-dark animate-spin-slow dark:fill-light" />
         <Link
           // href={"mailto:soumyaswaroopsootar@gmail.com"}
-          href={"https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gopigaurav@gmail.com"}
+          href={
+            "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gopigaurav9@gmail.com"
+          }
           target="_blank"
-          className="dark:bg-light dark:text-dark flex items-center pointer-events-auto justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-yellow-400 hover:dark:bg-yellow-400 hover:text-dark hover:border-none md:w-12 md:h-12 md:text-[10px]" 
+          className="dark:bg-light dark:text-dark flex items-center pointer-events-auto justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-yellow-400 hover:dark:bg-yellow-400 hover:text-dark hover:border-none md:w-12 md:h-12 md:text-[10px]"
         >
           Contact
         </Link>
