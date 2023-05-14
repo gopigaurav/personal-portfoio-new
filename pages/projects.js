@@ -15,7 +15,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const FeatureProject = ({ type, title, summary, img, github, link }) => {
   return (
-    <article className="dark:bg-dark dark:border-light w-full flex relative items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+    <article className="dark:bg-dark dark:border-light w-full flex-col flex relative items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-4 rounded-br-2xl lg:p-4 xs:rounded-2xl xs:rounded-br-3xl xs:p-2">
       <div className="overflow-hidden h-2/5 w-full">
         {img && (
           <Link
@@ -33,7 +33,7 @@ const FeatureProject = ({ type, title, summary, img, github, link }) => {
           </Link>
         )}
       </div>
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6 ">
+      <div className="w-full flex flex-col items-start justify-between pl-0 pt-3 ">
         <span className="text-primary dark:text-primaryDark font-medium text-xl xs:text-base">
           {type}
         </span>
@@ -135,7 +135,15 @@ const projects = () => {
           />
 
           <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 500: 2, 750: 2, 900: 3 }}
+            columnsCountBreakPoints={{
+              350: 1,
+              500: 2,
+              750: 2,
+              900: 2,
+              1080: 3,
+              1500: 4,
+              1900: 5,
+            }}
           >
             <Masonry>
               {project_details.map((key) => (
