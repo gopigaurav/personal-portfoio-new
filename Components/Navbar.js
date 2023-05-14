@@ -1,12 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import {
-  GithubIcon,
-  LinkedInIcon,
-  MoonIcon,
-  SunIcon,
-} from "./Icons";
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
@@ -69,7 +64,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="z-10 w-full px-32 lg:px-16 md:px-12 sm:px-6 font-medium py-8 flex items-center justify-between dark:text-light relative">
+    <header className="z-10 w-full px-32 lg:px-16 md:px-12 sm:px-6 font-medium py-8 flex items-center justify-between dark:text-light relative !fixed">
       {/* hamburger */}
       <button
         className="flex-col justify-center items-center hidden z-30 lg:flex"
@@ -109,7 +104,7 @@ const Navbar = () => {
         </nav>
         <nav className="flex item-center justify-center flex-wrap">
           <motion.a
-            href={"https://github.com/soumyasootar"}
+            href={"https://github.com/gopigaurav"}
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -118,9 +113,7 @@ const Navbar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href={
-              "https://www.linkedin.com/in/soumya-swaroop-sootar-a4b708118/"
-            }
+            href={""}
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -143,11 +136,18 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {/* mobile screen  */}
+      {/* mobile screen inside popup */}
       {isOpen ? (
         <motion.div
-          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
-          animate={{ scale: 1, opacity: 1 }}
+          initial={{
+            scale: 0,
+            opacity: 0,
+            left: "10%",
+            right: "10%",
+            top: "10%",
+            bottom: "10%",
+          }}
+          animate={{ scale: 1, opacity: 1, ease: "easeInOut", delay: 0.3 }}
           className=" min-w-[70vw] z-30 flex flex-col fixed justify-between items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-sm py-32"
         >
           <nav className="flex items-center flex-col justify-center">
@@ -208,8 +208,10 @@ const Navbar = () => {
           </nav>
         </motion.div>
       ) : null}
-      <div className="absolute top-2 left-[50%] translate-x-[-50%]">
-        <Logo />
+      <div className="brand absolute left-[50%] translate-x-[-50%]">
+        <p>
+          <span>G</span>opal
+        </p>
       </div>
     </header>
   );

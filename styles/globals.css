@@ -15,8 +15,9 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+body::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
 }
 
 .ring {
@@ -88,4 +89,12 @@ a {
   100% {
     transform: rotate(405deg);
   }
+}
+
+.brand p {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.brand p span {
+  color: crimson;
 }
