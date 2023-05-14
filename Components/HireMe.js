@@ -8,7 +8,6 @@ const HireMe = () => {
       <div className="w-48 h-48 flex items-center justify-center relative md:w-24">
         <CircularTextFullStack className="fill-dark animate-spin-slow dark:fill-light" />
         <Link
-          // href={"mailto:soumyaswaroopsootar@gmail.com"}
           href={
             "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gopigaurav9@gmail.com"
           }
