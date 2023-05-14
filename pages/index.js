@@ -9,8 +9,10 @@ import { RiContactsBookFill } from "react-icons/ri";
 import LightBulb from "../public/images/svgs/miscellaneous_icons_1.svg";
 import Transitions from "@/Components/Transitions";
 import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
 
 export default function Home() {
+  const img = "https://media.tenor.com/NOYF3f82b_gAAAAC/programmer.gif";
   return (
     <>
       <Head>
@@ -46,22 +48,21 @@ export default function Home() {
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
-                  href="/Soumya_Swaroop Sootar_Resume.pdf"
+                  href="https://drive.google.com/file/d/1BoufjdYrCNpzRj-SDy90o2BGpMsubGu1/view"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg font-semibold dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:border-light md:p-2 md:px-4 md:text-base"
                   download={true}
                 >
-                  RESUME <LinkArrow />
+                  <p>RESUME</p> <LinkArrow />
                 </Link>
                 <Link
-                  // href={"mailto:soumyaswaroopsootar@gmail.com"}
                   href={
                     "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gopigaurav9@gmail.com"
                   }
                   target="_blank"
                   className="ml-4 flex items-center bg-dark text-light p-2 rounded-lg text-lg font-semibold dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:border-light md:p-2 md:px-4 md:text-base"
                 >
-                  CONTACT
+                  <p>CONTACT</p>
                   <RiContactsBookFill className="ml-2" />
                 </Link>
               </div>

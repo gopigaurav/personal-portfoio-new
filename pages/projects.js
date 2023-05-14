@@ -130,7 +130,7 @@ const projects = () => {
       <main className="w-full flex flex-col justify-center items-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
+            text="Projects"
             className="mb-16 lg:!text-7xl sm:!mb-8 sm:!text-6xl xs:!text-4xl"
           />
 

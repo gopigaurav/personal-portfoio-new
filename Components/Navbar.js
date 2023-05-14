@@ -172,7 +172,7 @@ const Navbar = () => {
           </nav>
           <nav className="flex item-center justify-center flex-wrap mt-2">
             <motion.a
-              href={"https://github.com/soumyasootar"}
+              href={"https://github.com/gopigaurav"}
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -181,9 +181,7 @@ const Navbar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href={
-                "https://www.linkedin.com/in/soumya-swaroop-sootar-a4b708118/"
-              }
+              href={"https://www.linkedin.com/in/t-c-gopal-06a961166/"}
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
